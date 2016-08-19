@@ -45,3 +45,6 @@ group :development do
   gem 'spring'
 end
 
+gem 'devise'
+gem 'rolify'
+gem 'simple_form', '~> 3.2', '>= 3.2.1'
