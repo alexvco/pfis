@@ -85,6 +85,20 @@
                     <li>
                         <a href="#">Contact</a>
                     </li>
+                    <% if !user_signed_in? %>
+                    <li>
+                        <a href="/users/sign_up">Signup</a>
+                    </li>
+                    <li>
+                        <a href="/login">Login</a>
+                    </li>
+                    <% end %>
+                    <% if user_signed_in? %>
+                    <li>
+                        <!-- <a href="/users/sign_out">Log Out</a> -->
+                        <%= link_to "Logout", destroy_user_session_path, :method => :delete %>
+                    </li>
+                    <% end %>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
